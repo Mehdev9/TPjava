@@ -51,13 +51,11 @@ public class Tp {
                     break;
                 case 5:
                     System.out.println("Vous avez choisi de charger le nom ");
-                    nom = sc.next();
-                    chargerListe(nom);
+                    chargerListe();
                     break;
                 case 6:
                     System.out.println("Vous avez choisi d'afficher le nom ");
-                    nom = sc.next();
-                    afficherNom(nom);
+                    afficherNom();
                     break;
                 case 7:
                     System.out.println("Vous avez choisi de quitter ");
@@ -88,7 +86,7 @@ public class Tp {
         return listeNom.contains(nom);
     }
     ;
-    public static void afficherNom(String prenom){
+    public static void afficherNom(){
         System.out.println("Liste des noms: ");
         for (String nom : listeNom) {
             System.out.println(nom);
@@ -111,7 +109,7 @@ public class Tp {
         }
     }
     ;
-    public static void chargerListe(String nom){
+    public static void chargerListe(){
         try {
             FileReader reader = new FileReader("C:\\workspace\\EvalJava\\src\\Tpj.txt");
             BufferedReader br = new BufferedReader(reader);
